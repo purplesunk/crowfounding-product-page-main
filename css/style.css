@@ -1,0 +1,320 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary-500: hsl(176, 50%, 47%);
+  --clr-primary-800: hsl(176, 72%, 28%);
+
+  --clr-neutral-900: hsl(0, 0%, 0%);
+  --clr-neutral-800: hsl(0, 0%, 48%);
+
+  --fn-body: 'Commissioner', sans-serif;
+  --fs-body: 1rem;
+}
+
+body {
+  background-color: #F9F9F9;
+  font-family: var(--fn-body);
+  font-size: var(--fs-body);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+header {
+  background-image: url(../images/image-hero-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-neutral-900);
+}
+
+h1 {
+  font-size: 1.9rem;
+}
+
+p {
+  color: var(--clr-neutral-800);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+mark {
+  color: var(--clr-primary-500);
+  background-color: transparent;
+}
+
+button {
+  border: none;
+}
+
+/* UTILITIES MAYBE */
+
+.card {
+  background-color: #fff;
+  border: 1px solid hsla(0, 0%, 48%, 0.2);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  width: 90%;
+}
+
+li.card {
+  border-color: hsla(0, 0%, 48%, 0.7);
+  width: 100%;
+}
+
+.button {
+  background-color: var(--clr-primary-500);
+  border-radius: 2.2rem;
+  color: #fff;
+  font-weight: bold;
+  padding: 1.48em 2.8em;
+  transition: background-color 200ms ease-out;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: var(--clr-primary-800);
+  cursor: pointer;
+}
+
+/* NAVBAR */
+
+header > nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+nav > button {
+  background: transparent;
+  transform: scale(1.5);
+}
+
+.hamburger-close {
+  display: none;
+}
+
+.navbar-links.modal {
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%) scaleY(0.3);
+  top: 100%;
+}
+
+.navbar-links.modal.active {
+  transform: translateX(-50%) scaleY(1);
+}
+
+.navbar-links > li {
+  padding: 1.5rem;
+}
+
+.navbar-links > li + li {
+  border-top: 1px solid hsla(0, 0%, 48%, 0.2);
+}
+
+.navbar-links a {
+  color: var(--clr-neutral-900);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav.active {
+  z-index: 10;
+}
+
+nav.active > .hamburger-icon {
+  display: none;
+}
+
+nav.active > .hamburger-close {
+  display: block;
+}
+
+/* MAIN */
+main {
+  transform: translateY(-3%);
+  position: absolute;
+}
+
+.intro, .info {
+  text-align: center;
+}
+
+/* INTRO */
+.intro > img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.8rem;
+}
+
+.intro > h3 {
+  max-width: 20ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro > p {
+  margin-bottom: 2rem;
+}
+
+.intro-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.intro-buttons > * + * {
+  margin-left: 0.5rem;
+}
+
+.intro-buttons > .button {
+  width: 100%;
+}
+
+.bookmark {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* INFO */
+.info > p {
+  position: relative;
+  margin-top: 0.125rem;
+}
+
+.info > h1 {
+  margin-bottom: 0;
+}
+
+.info > p:first-of-type::after,
+.info > p:nth-of-type(2)::after {
+  background-color: hsla(0, 0%, 48%, 0.2);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 1.3rem);
+  height: 0.068rem; 
+  width: 5rem;
+}
+
+.info > p + h1 {
+  margin-top: 3rem;
+}
+
+.colleted-bar {
+  background-color: hsla(0, 0%, 48%, 0.2);
+  border-radius: 2rem;
+  height: 0.8rem;
+  margin: 2rem auto 1rem auto;
+  position: relative;
+  width: 100%;
+}
+
+.colleted-bar::after {
+  background-color: var(--clr-primary-500);
+  border-radius: 2rem;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+}
+
+/* ABOUT */
+.about > ul {
+  margin-bottom: 1.5rem;
+}
+
+.about > ul > li > h4 {
+  margin: 0.5rem 0;
+}
+
+.about > ul > li > p {
+  margin-top: 0;
+}
+
+.about > ul > li > button {
+  margin-bottom: 0.5rem;
+}
+
+.about > ul > li + li {
+  margin-top: 1.5rem;
+}
+
+.stock {
+  display: flex;
+  align-items: center;
+}
+.stock > * + * {
+  margin-left: 0.5rem;
+}
+
+.about > p:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+/* MODALS */
+
+.modal,
+.overlay {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scaleY(0.3);
+  transition: opacity 300ms ease, transform 300ms ease;
+  z-index: 10;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scaleY(1);
+  opacity: 1;
+  visibility: visible;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0; bottom: 0; right: 0; left: 0;
+  transition: opacity 300ms ease;
+  z-index: 1;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* FOOTER */
