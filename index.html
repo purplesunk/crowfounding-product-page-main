@@ -37,28 +37,28 @@
   <main>
     <section class="intro card">
       <img src="images/logo-mastercraft.svg" alt="logo mastercraft">
-      <h2>Mastercraft Bamboo Monitor Riser</h2>
+      <h1>Mastercraft Bamboo Monitor Riser</h1>
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
      <div class="intro-buttons">
        <button data-modal-target="#back-this-project" class="button">Back this project</button>
-       <button class="bookmark">
+       <button class="bookmark" aria-label="bookmark">
          <svg width="57" height="57" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle class="circle" fill="#2F2F2F" cx="28" cy="28" r="28"/><path class="bookmark-icon" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
        </button>
      </div>
     </section>
     <section class="info card">
       <div class="info-content">
-        <h1>$89,914</h1> 
+        <h2>$89,914</h2> 
         <p>of $100,000 backed</p>
-        <h1>5,007</h1>
+        <h2>5,007</h2>
         <p>total backers</p>
-        <h1>56</h1> 
+        <h2>56</h2> 
         <p>days left</p>
       </div>
       <div class="colleted-bar"></div>
     </section>
     <section class="about card">
-      <h3>About this project</h3>
+      <h2>About this project</h2>
       <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
       to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
       your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
@@ -67,7 +67,7 @@
       <ul>
         <li class="card">
           <div class="header">
-            <h4>Bamboo Stand</h4>
+            <h3>Bamboo Stand</h3>
             <p><mark>Pledge $25 or more</mark></p>
           </div>
           <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
@@ -79,7 +79,7 @@
         </li>
         <li class="card">
           <div class="header">
-            <h4>Black Edition Stand</h4>
+            <h3>Black Edition Stand</h3>
             <p><mark>Pledge $75 or more</mark></p>
           </div>
           <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
@@ -91,7 +91,7 @@
         </li>
         <li class="card out-of-stock">
           <div class="header">
-            <h4>Mahogany Special Edition</h4>
+            <h3>Mahogany Special Edition</h3>
             <p><mark>Pledge $200 or more</mark></p>
           </div>
           <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
@@ -104,8 +104,8 @@
       </ul>
     </section>
   </main>
-  <div class="overlay"></div>  
-  <div id="back-this-project" class="modal">
+  <div class="overlay" aria-hidden="true"></div>  
+  <div id="back-this-project" class="modal" role="dialog" aria-label="back this project">
     <form class="card" action="#">
       <h3>Back this project</h3>
       <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
@@ -113,65 +113,65 @@
        <li class="card">
          <div class="reward">
            <input type="radio" id="no-reward" name="reward" value="no-reward">
-           <label for="no-reward"><h4>Pledge with no reward</h4></label>
+           <h4><label for="no-reward">Pledge with no reward</label></h4>
            <p>Choose to support us without a reward if you simply believe in our project. As a backer, 
            you will be signed up to receive product updates via email.</p>
          </div>
          <div class="pledge">
-           <p><label for="">Enter your pledge</label></p>
+           <p><label for="yolo">Enter your pledge</label></p>
            <div class="money"><input type="number" value="1" min="1" step="0.01"></div>
-           <button data-modal-target="#thanks" data-modal-close="" class="button">Continue</button>
+           <button id="yolo" data-modal-target="#thanks" data-modal-close="" class="button">Continue</button>
          </div>
        </li>
        <li class="card">
          <div class="reward">
            <input type="radio" id="bamboo-stand" name="reward" value="bamboo-stand">
-           <label for="bamboo-stand"><h4>Bamboo Stand</h4></label>
+           <h4><label for="bamboo-stand">Bamboo Stand</label></h4>
            <p class="pledge-info"><mark>Pledge $25 or more</mark></p>
            <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
            you’ll be added to a special Backer member list.</p>
             <div class="stock"><h2>101</h2><p>left</p></div>
          </div>
          <div class="pledge">
-           <p><label for="">Enter your pledge</label></p>
+           <p><label for="25">Enter your pledge</label></p>
            <div class="money"><input type="number" value="25" min="25"></div>
-           <button data-modal-target="#thanks" data-modal-close="" class="button">Continue</button>
+           <button id="25" data-modal-target="#thanks" data-modal-close="" class="button">Continue</button>
          </div>
        </li>
        <li class="card">
          <div class="reward">
            <input type="radio" id="black-stand" name="reward" value="black-stand">
-           <label for="black-stand"><h4>Black Edition Stand</h4></label>
+           <h4><label for="black-stand">Black Edition Stand</label></h4>
            <p class="pledge-info"><mark>Pledge $75 or more</mark></p>
            <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
            member list. Shipping is included.</p>
             <div class="stock"><h2>64</h2><p>left</p></div>
          </div>
          <div class="pledge">
-           <p><label for="">Enter your pledge</label></p>
+           <p><label for="75">Enter your pledge</label></p>
            <div class="money"><input type="number" value="75" min="75"></div>
-           <button data-modal-target="#thanks" data-modal-close="" class="button">Continue</button>
+           <button id="75" data-modal-target="#thanks" data-modal-close="" class="button">Continue</button>
          </div>
        </li>
        <li class="card out-of-stock">
          <div class="reward">
            <input type="radio" id="special" name="reward" value="special" disabled>
-           <label for="special"><h4>Mahogany Special Edition</h4></label>
+           <h4><label for="special">Mahogany Special Edition</label></h4>
            <p class="pledge-info"><mark>Pledge $200 or more</mark></p>
            <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
            to our Backer member list. Shipping is included.</p>  
             <div class="stock"><h2>0</h2><p>left</p></div>
          </div>
          <div class="pledge">
-           <p><label for="">Enter your pledge</label></p>
+           <p><label for="200">Enter your pledge</label></p>
            <div class="money"><input type="number" value="200" min="200" disabled></div>
-           <button data-modal-target="#thanks" data-modal-close="" class="button" disabled>Continue</button>
+           <button id="200" data-modal-target="#thanks" data-modal-close="" class="button" disabled>Continue</button>
          </div>
        </li>
       </ul>
     </form>
   </div>
-  <div id="thanks" class="modal">
+  <div id="thanks" class="modal" role="dialog" aria-label="thanks for your support">
     <div class="modal-content thank card">
       <img src="images/icon-check.svg" alt="check icon">
       <h3>Thanks for your support!</h3>

@@ -507,9 +507,10 @@ body.modal-open {
 
   header > nav {
     align-items: center;
-    margin: 0 auto;
-    width: min(100%, 70rem);
     justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 3.5rem;
+    width: min(100%, 70rem);
   }
 
   h2 {
@@ -529,6 +530,9 @@ body.modal-open {
   }
 
   /* UTILITIES */
+  .card {
+    padding: 2rem 2.5rem;
+  }
   /* NAVBAR */
   .navbar-links.modal-content {
     background-color: transparent;
