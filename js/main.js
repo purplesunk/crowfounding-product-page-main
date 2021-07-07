@@ -18,6 +18,9 @@ const openModal = modal => {
   modal.classList.add('active')
   overlay.classList.add('active')
   body.classList.add('modal-open')
+  body.addEventListener('keypress', event => {
+    console.log(event)
+  })
 }
 const openNavbarMenu = modal => {
   modal.closest('nav').classList.add('active')
@@ -49,6 +52,7 @@ const closeModal = (modal, check = false) => {
   } else {
     overlay.classList.remove('active')
     body.classList.remove('modal-open')
+    body.removeEventListener('keypress', escExitModal(event))
   }
 }
 const closeNavbarMenu = (modal, navbar) => {
@@ -74,3 +78,8 @@ radioInputs.forEach(button => button.addEventListener('click', _ => {
     if (radio.checked) { pledgeDiv.classList.add('active') }
   })
 }))
+
+// keyboard 
+const escExitModal = (event) => {
+  console.log(event)
+}
